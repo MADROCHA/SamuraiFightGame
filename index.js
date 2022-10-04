@@ -199,7 +199,7 @@ const gravity = 0.2
 //
 //
 let UI = {
-    debug: true
+    debug: false
 }
 //
 decreaseTimer()
