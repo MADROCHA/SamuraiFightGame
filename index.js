@@ -42,10 +42,6 @@ const gravity = 0.2
             width: 50,
             height: 150
         },
-        offset: {
-            x:0,
-            y:0
-        },
         //color: 'rgb(79, 184, 174)', 
         color: '#0F766E', 
         sprites: {
@@ -83,16 +79,20 @@ const gravity = 0.2
         resize:2.5,
         holdFrames:7,
         offset: {
-            x: 215,
+            x: 225,
             y: 155
         },
         attackHitBox: {
             offset: {
-                x:100,
-                y:50,
+                x:50,
+                y:20,
+                //x:50,
+                //y:20,
             },
-            width:160,
-            height:50,
+            width:198,
+            height:90,
+            //width:198,
+            //height:70,
         },
         //color: 'green', 
     })
@@ -109,10 +109,6 @@ const gravity = 0.2
         size: {
             width: 50,
             height: 150
-        },
-        offset: {
-            x:0,
-            y:0
         },
         //color: 'rgb(184, 79, 160', 
         color: '#A21CAF', 
@@ -151,16 +147,23 @@ const gravity = 0.2
         resize:2.5,
         holdFrames:10,
         offset: {
-            x: 215,
-            y: 170
+            /* x: 215,
+            y: 170 */
+            
+            x: 225,
+            y: 170 
         },
         attackHitBox: {
             offset: {
-                x:-170,
-                y:50,
+                x:-182,
+                y:20,
+                /* x:-182,
+                y:45, */
             },
-            width:170,
-            height:50,
+            width:182,
+            height:90,
+            /* width:182,
+            height:60, */
         },
         //color: 'purple', 
     })
@@ -196,7 +199,7 @@ const gravity = 0.2
 //
 //
 let UI = {
-    debug: false
+    debug: true
 }
 //
 decreaseTimer()

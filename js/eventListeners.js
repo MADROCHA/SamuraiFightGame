@@ -11,7 +11,9 @@ window.addEventListener('keydown', (e) =>{
             case 'w' :
             keys.w.pressed = true
             playerA.lastKey = 'w'
-            playerA.velocity.y = -10
+            if(playerA.velocity.y === 0){
+                playerA.velocity.y = -10
+            }
         break
         case 'a' :
             keys.a.pressed = true
@@ -41,7 +43,9 @@ window.addEventListener('keydown', (e) =>{
             case 'ArrowUp' :
             keys.arrowUp.pressed = true
             playerB.lastKey = 'Up'
-            playerB.velocity.y = -10
+            if(playerB.velocity.y === 0){
+                playerB.velocity.y = -10
+            }
         break
         case 'ArrowLeft' :
             keys.arrowLeft.pressed = true

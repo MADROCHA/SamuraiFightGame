@@ -68,14 +68,20 @@ class Fighter extends Sprite {
             if (!this.playerDefeated){
                 this.animateFrames();
             }
-
+            // boundries horizontal wip
+            if (this.position.x <= canvas.width - canvas.width){
+                this.position.x = canvas.width - canvas.width
+            } else if(this.position.x + this.size.width >= canvas.width){
+                this.position.x = canvas.width - this.size.width
+            }
+            // boundries horizontal wip
             //attack hitbox
             this.attackHitBox.position.x = this.position.x + this.attackHitBox.offset.x
             this.attackHitBox.position.y = this.position.y + this.attackHitBox.offset.y
             //attack hitbox
             if (UI.debug){
-                c.fillStyle = this.color
-                c.fillRect(
+                c.strokeStyle = this.color
+                c.strokeRect(
                     this.attackHitBox.position.x,
                     this.attackHitBox.position.y,
                     this.attackHitBox.width,
@@ -118,6 +124,7 @@ class Fighter extends Sprite {
         }
         switchSprite(sprite){
             if(this.image === this.sprites.defeated.image){
+                this.velocity.x =0
                 if(this.currentFrames === this.sprites.defeated.maxFrames -1)
                 this.playerDefeated = true
                 return
