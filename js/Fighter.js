@@ -55,6 +55,7 @@ class Fighter extends Sprite {
         this.holdFrames = holdFrames
         this.sprites = sprites 
         this.playerDefeated = false
+        this.playerDisabled = false
 
         for (const sprite in this.sprites){
             sprites[sprite].image = new Image()
@@ -113,18 +114,27 @@ class Fighter extends Sprite {
             }, 100) */
         }
         takeHit(){
+            this.health -= 100
             
-            this.health -= 10
             if(this.health <= 0){
                 this.switchSprite('defeated')
-                
+                //
+                keys.w.pressed = false
+                keys.a.pressed = false
+                keys.s.pressed = false    
+                keys.d.pressed = false
+                //
+                keys.arrowUp.pressed = false
+                keys.arrowLeft.pressed = false
+                keys.arrowDown.pressed = false
+                keys.arrowRight.pressed = false
             }else {
                 this.switchSprite('takeHit')
             }
         }
         switchSprite(sprite){
             if(this.image === this.sprites.defeated.image){
-                this.velocity.x =0
+                this.playerDisabled = true
                 if(this.currentFrames === this.sprites.defeated.maxFrames -1)
                 this.playerDefeated = true
                 return
@@ -140,6 +150,7 @@ class Fighter extends Sprite {
                 && this.currentFrames < this.sprites.takeHit.maxFrames -1
                 ) return 
             // overrides all animations with takeHit
+            
                 switch (sprite) {
                 case 'idle':
                     if(this.image !== this.sprites.idle.image){

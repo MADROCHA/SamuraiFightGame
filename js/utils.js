@@ -25,16 +25,23 @@ function determineWinnerPlayer({playerA,playerB, timerId}){
         }
     }
 //
-let timer = 61
+let timer = 13
 let timerId
 function decreaseTimer() {
     if(timer > 0){
         timerId = setTimeout(decreaseTimer, 1000)
         timer--
         document.querySelector('#timer').innerHTML = timer
+        //
+        if(timer <= 9){
+            document.querySelector('#timer').style.color = 'yellow'
+            document.querySelector('#timer').style.fontSize = '20px'  
+        }
+        //
     }
     if(timer === 0){
         
         determineWinnerPlayer({playerA, playerB, timerId })
     }
 }
+

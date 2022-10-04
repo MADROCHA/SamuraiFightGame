@@ -6,6 +6,17 @@ Github
 VSC
 gsap
 
+## Notes
+wip:
+- players stagger
+added:
+- boundaries left / right 
+- time alert
+fixed:
+- jump Infinite / Flyng
+- players able to keep his velocity movement after defeated
+
+
 ## programming languages 
 
 [![My Skills](https://skills.thijs.gg/icons?i=html)](https://skills.thijs.gg)

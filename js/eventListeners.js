@@ -6,7 +6,10 @@ window.addEventListener('keydown', (e) =>{
             break
     }
     //PLAYER 1
-    if(!playerA.playerDefeated){
+    if(
+        !playerA.playerDisabled
+        //!playerA.playerDefeated
+        ){
         switch (e.key) {
             case 'w' :
             keys.w.pressed = true
@@ -38,7 +41,11 @@ window.addEventListener('keydown', (e) =>{
     }
 
     //PLAYER 2
-    if(!playerB.playerDefeated){
+    if(
+        !playerB.playerDisabled
+        //!playerB.playerDefeated
+        
+        ){
         switch(e.key) {
             case 'ArrowUp' :
             keys.arrowUp.pressed = true

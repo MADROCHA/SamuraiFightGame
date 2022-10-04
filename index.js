@@ -278,6 +278,9 @@ c.fillStyle = 'rgba(255,255,255,0.15'
                 && playerA.isAttacking
                 && playerA.currentFrames === 4
             ){
+                // wip_ gettin damaged disables incoming attack
+                //playerB.isAttacking = false
+                //
                 playerB.takeHit()
                 playerA.isAttacking = false
                 console.log('Hit attack A')
@@ -301,6 +304,9 @@ c.fillStyle = 'rgba(255,255,255,0.15'
                 && playerB.isAttacking
                 && playerB.currentFrames === 2 
             ){
+                // wip_ gettin damaged disables incoming attack
+                //playerA.isAttacking = false
+                //
                 playerA.takeHit()
                 playerB.isAttacking = false
                 console.log('Hit attack B')
