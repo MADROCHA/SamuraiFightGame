@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FightGame</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Press Start 2P', cursive;
+
+        }
+    </style>
+</head>
+<body>
+    <!--  container -->
+    <div style=" position: relative; display: inline-block;">
+        <!-- small container -->
+        <div style="
+        padding: 40px;
+        position: absolute; 
+        display: flex; 
+        width: 100%; 
+        align-items: center;
+        ">
+
+            <!-- PlayerA LiveBar -->
+            <section style="
+                position: relative;
+                width: 100%; 
+                display: flex;
+                justify-content: flex-end;
+                border-top: 4px solid #E2E8F0;
+                border-left: 4px solid #E2E8F0;
+                border-bottom: 4px solid #E2E8F0;
+            ">
+                <div style ="background-color: rgb(156, 12, 29);height: 30px; width: 100%;"></div>
+                    <div id="HealthPlayerA" 
+                    style="
+                        position: absolute;
+                        background-color: #15803D;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        width: 100%;
+                    "></div>
+            </section>
+            <!-- Game Timer -->
+            <div id="timer" 
+            style="
+                background-color: #334155;
+                color: white;
+                width: 100px;
+                height: 50px; 
+                flex-shrink:0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 4px solid #E2E8F0;
+            ">timer</div>
+            <!-- PlayerB LiveBar -->
+            <section style="
+                position: relative;
+                width: 100%; 
+                border-top: 4px solid #E2E8F0;
+                border-right: 4px solid #E2E8F0;
+                border-bottom: 4px solid #E2E8F0;
+            ">
+                <div style ="background-color: rgb(156, 12, 29); height: 30px;"></div>
+                    <div id="HealthPlayerB" 
+                    style="
+                        position: absolute;
+                        background-color: #15803D;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                    "></div>
+            </section>
+            
+        </div>
+        <section id="displayText" style="
+        position: absolute;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: none;
+        ">Tie</section>
+        <canvas></canvas>
+    </div>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js" 
+        integrity="sha512-gsEItzcNkWxfxHjr4BaEZAd9YuRWYjxnj7c/yukcZ0/nWehUb5TjJNyyv1ApCU2DFH/qgw+stFZHPOKnoQnIuQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    </script>
+    <script src="./js/eventListeners.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/Sprite.js"></script>
+    <script src="./js/Fighter.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
